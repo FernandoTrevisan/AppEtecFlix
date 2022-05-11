@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="etecflix.Filmes.CapitaMarvel"
+             BackgroundColor="#2f2f30">
+
+    <StackLayout Orientation="Vertical">
+        <Image x:Name="logo" Style="{StaticResource logo_filme}" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <WebView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="viewer"
+                     VerticalOptions="FillAndExpand" BackgroundColor="#2f2f30"/>
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                <ScrollView>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="300"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Image x:Name="poster" Grid.Row="0" Grid.Column="0" Aspect="AspectFill" />
+
+                        <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="Center">
+                            <Label Text="TÍTULO" Style="{StaticResource label_vermelho}" />
+                            <Label Text="Capitã Marvel" Style="{StaticResource label_branco}" />
+                            <Label Text="ANO DE LANÇAMENTO" Style="{StaticResource label_vermelho}" />
+                            <Label Text="7 de março de 2019" Style="{StaticResource label_branco}" />
+                            <Label Text="DIREÇÃO" Style="{StaticResource label_vermelho}" />
+                            <Label Text="Anna Boden, Ryan Fleck" Style="{StaticResource label_branco}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Padding="10">
+                            <Label Text="SINOPSE" Style="{StaticResource label_vermelho}" />
+                            <Label x:Name="sinopse" Style="{StaticResource label_branco}" />
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

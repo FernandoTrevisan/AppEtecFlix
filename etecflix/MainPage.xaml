@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="etecflix.MainPage"
+             BackgroundColor="#2f2f30">
+
+    <StackLayout>
+        <Image x:Name="logo" HeightRequest="150"/>
+
+        <ScrollView>
+            <Grid RowSpacing="20" ColumnSpacing="10" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Text="AVENTURA"
+                        Style="{StaticResource redbutton}"
+                        Clicked="Btn_Open_Aventura"/>
+
+                <Button Grid.Row="0" Grid.Column="1" Text="COMÉDIA"
+                        Style="{StaticResource redbutton}"
+                        Clicked="Btn_Open_Comedia"/>
+
+                <Button Grid.Row="1" Grid.Column="0" Text="DRAMA"
+                        Style="{StaticResource redbutton}"
+                        Clicked="Btn_Open_Drama"/>
+
+                <Button Grid.Row="1" Grid.Column="1" Text="TERROR"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="2" Grid.Column="0" Text="FICÇÃO CIENTÍFICA"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="2" Grid.Column="1" Text="SUSPENSE"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="3" Grid.Column="0" Text="INFANTIL"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="3" Grid.Column="1" Text="ANIMAÇÃO"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="4" Grid.Column="0" Text="DOCUMENTÁRIO"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="4" Grid.Column="1" Text="GUERRA"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="5" Grid.Column="0" Text="NACIONAL"
+                        Style="{StaticResource redbutton}" />
+
+                <Button Grid.Row="5" Grid.Column="1" Text="ROMANCE"
+                        Style="{StaticResource redbutton}" />
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
